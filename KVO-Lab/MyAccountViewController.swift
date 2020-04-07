@@ -21,11 +21,6 @@ class MyAccountViewController: UIViewController {
         configureUsername()
         configureBalance()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        configureUsername()
-        configureBalance()
-    }
     
     private func configureUsername() {
         usernameObserver = AccountUser.shared.observe(\.username, options: [.old, .new], changeHandler: { [weak self] (user, change) in

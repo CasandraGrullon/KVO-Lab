@@ -35,7 +35,6 @@ class WithdrawDepositViewController: UIViewController {
             self?.totalBalanceLabel.text = newTotal.description
         })
     }
-    
 
     @IBAction func withdrawButtonPressed(_ sender: UIButton) {
         let withdrawAmount = amountTextField.text?.convertToDouble() ?? 0.0
