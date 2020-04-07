@@ -45,6 +45,9 @@ class WithdrawDepositViewController: UIViewController {
         let depositAmount = amountTextField.text?.convertToDouble() ?? 0.0
         AccountUser.shared.totalBalance = (AccountUser.shared.totalBalance) + depositAmount
     }
+    deinit {
+        balanceObserver?.invalidate()
+    }
 }
 extension WithdrawDepositViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

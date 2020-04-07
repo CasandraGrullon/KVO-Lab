@@ -35,6 +35,10 @@ class SettingsViewController: UIViewController {
         configureSettings()
         dismiss(animated: true)
     }
+    deinit {
+        usernameObserver?.invalidate()
+        balanceObserver?.invalidate()
+    }
     
 }
 extension SettingsViewController: UITextFieldDelegate {
