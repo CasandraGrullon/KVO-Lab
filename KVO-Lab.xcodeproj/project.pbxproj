@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6056FBB243CF4B800790848 /* AccountUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6056FBA243CF4B800790848 /* AccountUser.swift */; };
 		C6D0C79A243CE12400C1A475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0C799243CE12400C1A475 /* AppDelegate.swift */; };
 		C6D0C79C243CE12400C1A475 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0C79B243CE12400C1A475 /* SceneDelegate.swift */; };
 		C6D0C79E243CE12400C1A475 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0C79D243CE12400C1A475 /* MyAccountViewController.swift */; };
 		C6D0C7A1243CE12400C1A475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D0C79F243CE12400C1A475 /* Main.storyboard */; };
 		C6D0C7A3243CE12600C1A475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D0C7A2243CE12600C1A475 /* Assets.xcassets */; };
 		C6D0C7A6243CE12600C1A475 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D0C7A4243CE12600C1A475 /* LaunchScreen.storyboard */; };
+		C6D0C7AE243CF1B800C1A475 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0C7AD243CF1B800C1A475 /* SettingsViewController.swift */; };
+		C6D0C7B0243CF1D400C1A475 /* WithdrawDepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0C7AF243CF1D400C1A475 /* WithdrawDepositViewController.swift */; };
+		C6D0C7B2243CF1E200C1A475 /* OtherAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0C7B1243CF1E200C1A475 /* OtherAccountsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C6056FBA243CF4B800790848 /* AccountUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUser.swift; sourceTree = "<group>"; };
 		C6D0C796243CE12400C1A475 /* KVO-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KVO-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D0C799243CE12400C1A475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6D0C79B243CE12400C1A475 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		C6D0C7A2243CE12600C1A475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6D0C7A5243CE12600C1A475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6D0C7A7243CE12600C1A475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D0C7AD243CF1B800C1A475 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C6D0C7AF243CF1D400C1A475 /* WithdrawDepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawDepositViewController.swift; sourceTree = "<group>"; };
+		C6D0C7B1243CF1E200C1A475 /* OtherAccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherAccountsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +66,11 @@
 			children = (
 				C6D0C799243CE12400C1A475 /* AppDelegate.swift */,
 				C6D0C79B243CE12400C1A475 /* SceneDelegate.swift */,
+				C6056FBA243CF4B800790848 /* AccountUser.swift */,
 				C6D0C79D243CE12400C1A475 /* MyAccountViewController.swift */,
+				C6D0C7AD243CF1B800C1A475 /* SettingsViewController.swift */,
+				C6D0C7AF243CF1D400C1A475 /* WithdrawDepositViewController.swift */,
+				C6D0C7B1243CF1E200C1A475 /* OtherAccountsViewController.swift */,
 				C6D0C79F243CE12400C1A475 /* Main.storyboard */,
 				C6D0C7A2243CE12600C1A475 /* Assets.xcassets */,
 				C6D0C7A4243CE12600C1A475 /* LaunchScreen.storyboard */,
@@ -140,7 +152,11 @@
 			files = (
 				C6D0C79E243CE12400C1A475 /* MyAccountViewController.swift in Sources */,
 				C6D0C79A243CE12400C1A475 /* AppDelegate.swift in Sources */,
+				C6D0C7B0243CF1D400C1A475 /* WithdrawDepositViewController.swift in Sources */,
+				C6056FBB243CF4B800790848 /* AccountUser.swift in Sources */,
+				C6D0C7B2243CF1E200C1A475 /* OtherAccountsViewController.swift in Sources */,
 				C6D0C79C243CE12400C1A475 /* SceneDelegate.swift in Sources */,
+				C6D0C7AE243CF1B800C1A475 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

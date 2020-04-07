@@ -10,11 +10,48 @@ import UIKit
 
 class MyAccountViewController: UIViewController {
 
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var balanceLabel: UILabel!
+    
+    private var usernameObserver: NSKeyValueObservation?
+    private var balanceObserver: NSKeyValueObservation?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        configureUsername()
+        configureBalance()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        configureUsername()
+        configureBalance()
+    }
+    
+    private func configureUsername() {
+        usernameObserver = AccountUser.shared.observe(\.username, options: [.old, .new], changeHandler: { [weak self] (user, change) in
+            guard let newUsername = change.newValue else { return }
+            self?.usernameLabel.text = newUsername
+        })
+    }
+    private func configureBalance() {
+        balanceObserver = AccountUser.shared.observe(\.totalBalance, options: [.old, .new], changeHandler: { [weak self] (account, change) in
+            guard let newBalance = change.newValue else { return }
+            self?.balanceLabel.text = newBalance.description
+        })
+    }
+    
+    @IBAction func editButtonPressed(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let settingsVC = storyboard.instantiateViewController(identifier: "SettingsViewController")
+        present(settingsVC, animated: true)
+        
+    }
+    
+    deinit {
+        usernameObserver?.invalidate()
+        balanceObserver?.invalidate()
+    }
+    
 
 }
 
