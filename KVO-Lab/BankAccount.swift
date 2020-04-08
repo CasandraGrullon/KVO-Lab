@@ -10,12 +10,12 @@ import Foundation
 
 @objc class BankAccount: NSObject {
     static var shared = BankAccount()
-    @objc dynamic var totalBalance: Double
-    @objc dynamic var username: String
+    @objc dynamic var totalBalance: Double = 0.0
+    @objc dynamic var username: String = ""
     
-    override private init() {
-        totalBalance = 0.00
-        username = "user name"
-    }
+//    override private init() {
+//        totalBalance = 0.00
+//        username = "user name"
+//    }
     
 }

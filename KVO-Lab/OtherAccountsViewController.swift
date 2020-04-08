@@ -20,7 +20,6 @@ class OtherAccountsViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUserObservation()
@@ -29,15 +28,14 @@ class OtherAccountsViewController: UIViewController {
     
     private func configureUserObservation() {
         userObservation = User.shared.observe(\.users, options: [.old, .new], changeHandler: { [weak self] (user, change) in
-            guard let newUser = change.newValue else {return}
-            self?.users.append(contentsOf: newUser)
+            guard let user = change.newValue else {return}
+            self?.users = user
         })
     }
     
     deinit {
         userObservation?.invalidate()
     }
-
 
 }
 extension OtherAccountsViewController: UITableViewDataSource {
@@ -48,7 +46,6 @@ extension OtherAccountsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
         let user = users[indexPath.row]
-        cell.backgroundColor = .red
         cell.textLabel?.text = user.username
         cell.detailTextLabel?.text = "$\(user.totalBalance)"
         return cell

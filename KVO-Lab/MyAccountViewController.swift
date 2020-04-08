@@ -15,6 +15,8 @@ class MyAccountViewController: UIViewController {
     
     private var usernameObserver: NSKeyValueObservation?
     private var balanceObserver: NSKeyValueObservation?
+    private var userObservation: NSKeyValueObservation?
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,7 @@ class MyAccountViewController: UIViewController {
             guard let newUsername = change.newValue else { return }
             self?.usernameLabel.text = newUsername
         })
+        
     }
     private func configureBalance() {
         balanceObserver = BankAccount.shared.observe(\.totalBalance, options: [.old, .new], changeHandler: { [weak self] (account, change) in

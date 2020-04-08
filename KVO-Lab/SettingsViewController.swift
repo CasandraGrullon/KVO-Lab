@@ -31,8 +31,15 @@ class SettingsViewController: UIViewController {
         BankAccount.shared.totalBalance = newBalance
     }
     
+    
     @IBAction func doneButtonPressed(_ sender: UIButton) {
         configureSettings()
+        
+        let user = BankAccount()
+        user.username = usernameTextField.text ?? ""
+        let newBalance = accountBalanceTextField.text?.convertToDouble() ?? 0.00
+        user.totalBalance = newBalance
+        User.shared.users.append(user)
         dismiss(animated: true)
     }
     deinit {
