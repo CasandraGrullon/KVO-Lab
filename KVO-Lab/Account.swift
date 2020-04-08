@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc class User: NSObject {
-    static var shared = User()
-    @objc dynamic var users = [BankAccount]()
+@objc class Account: NSObject {
+    static var shared = Account()
+    @objc dynamic var users = [AccountUser]()
 }

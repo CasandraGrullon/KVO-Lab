@@ -13,8 +13,9 @@ class OtherAccountsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var userObservation: NSKeyValueObservation?
+    private var balanceObservation: NSKeyValueObservation?
     
-    private var users = [BankAccount]() {
+    private var users = [AccountUser]() {
         didSet {
             tableView.reloadData()
         }
@@ -27,7 +28,7 @@ class OtherAccountsViewController: UIViewController {
     }
     
     private func configureUserObservation() {
-        userObservation = User.shared.observe(\.users, options: [.old, .new], changeHandler: { [weak self] (user, change) in
+        userObservation = Account.shared.observe(\.users, options: [.old, .new], changeHandler: { [weak self] (user, change) in
             guard let user = change.newValue else {return}
             self?.users = user
         })
@@ -46,8 +47,15 @@ extension OtherAccountsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
         let user = users[indexPath.row]
-        cell.textLabel?.text = user.username
         cell.detailTextLabel?.text = "$\(user.totalBalance)"
+        if user.username == AccountUser.shared.username {
+            balanceObservation = AccountUser.shared.observe(\.totalBalance, options: [.old, .new], changeHandler: { (balance, change) in
+                guard let newBalance = change.newValue else {return}
+                cell.detailTextLabel?.text = "$\(newBalance)"
+            })
+        }
+        cell.textLabel?.text = user.username
+        
         return cell
     }
     

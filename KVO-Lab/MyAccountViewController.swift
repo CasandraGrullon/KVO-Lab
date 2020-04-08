@@ -25,14 +25,14 @@ class MyAccountViewController: UIViewController {
     }
     
     private func configureUsername() {
-        usernameObserver = BankAccount.shared.observe(\.username, options: [.old, .new], changeHandler: { [weak self] (user, change) in
+        usernameObserver = AccountUser.shared.observe(\.username, options: [.old, .new], changeHandler: { [weak self] (user, change) in
             guard let newUsername = change.newValue else { return }
             self?.usernameLabel.text = newUsername
         })
         
     }
     private func configureBalance() {
-        balanceObserver = BankAccount.shared.observe(\.totalBalance, options: [.old, .new], changeHandler: { [weak self] (account, change) in
+        balanceObserver = AccountUser.shared.observe(\.totalBalance, options: [.old, .new], changeHandler: { [weak self] (account, change) in
             guard let newBalance = change.newValue else { return }
             self?.balanceLabel.text = newBalance.description
         })

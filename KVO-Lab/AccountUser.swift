@@ -8,8 +8,8 @@
 
 import Foundation
 
-@objc class BankAccount: NSObject {
-    static var shared = BankAccount()
+@objc class AccountUser: NSObject {
+    static var shared = AccountUser()
     @objc dynamic var totalBalance: Double = 0.0
     @objc dynamic var username: String = ""
     

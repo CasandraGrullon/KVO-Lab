@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C6056FBB243CF4B800790848 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6056FBA243CF4B800790848 /* BankAccount.swift */; };
-		C6951B45243E75790018F1DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6951B44243E75790018F1DF /* User.swift */; };
+		C6056FBB243CF4B800790848 /* AccountUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6056FBA243CF4B800790848 /* AccountUser.swift */; };
+		C6951B45243E75790018F1DF /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6951B44243E75790018F1DF /* Account.swift */; };
 		C6D0C79A243CE12400C1A475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0C799243CE12400C1A475 /* AppDelegate.swift */; };
 		C6D0C79C243CE12400C1A475 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0C79B243CE12400C1A475 /* SceneDelegate.swift */; };
 		C6D0C79E243CE12400C1A475 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0C79D243CE12400C1A475 /* MyAccountViewController.swift */; };
@@ -21,8 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C6056FBA243CF4B800790848 /* BankAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccount.swift; sourceTree = "<group>"; };
-		C6951B44243E75790018F1DF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C6056FBA243CF4B800790848 /* AccountUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUser.swift; sourceTree = "<group>"; };
+		C6951B44243E75790018F1DF /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		C6D0C796243CE12400C1A475 /* KVO-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KVO-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D0C799243CE12400C1A475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6D0C79B243CE12400C1A475 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 			children = (
 				C6D0C799243CE12400C1A475 /* AppDelegate.swift */,
 				C6D0C79B243CE12400C1A475 /* SceneDelegate.swift */,
-				C6056FBA243CF4B800790848 /* BankAccount.swift */,
-				C6951B44243E75790018F1DF /* User.swift */,
+				C6056FBA243CF4B800790848 /* AccountUser.swift */,
+				C6951B44243E75790018F1DF /* Account.swift */,
 				C6D0C79D243CE12400C1A475 /* MyAccountViewController.swift */,
 				C6D0C7AD243CF1B800C1A475 /* SettingsViewController.swift */,
 				C6D0C7AF243CF1D400C1A475 /* WithdrawDepositViewController.swift */,
@@ -156,8 +156,8 @@
 				C6D0C79E243CE12400C1A475 /* MyAccountViewController.swift in Sources */,
 				C6D0C79A243CE12400C1A475 /* AppDelegate.swift in Sources */,
 				C6D0C7B0243CF1D400C1A475 /* WithdrawDepositViewController.swift in Sources */,
-				C6056FBB243CF4B800790848 /* BankAccount.swift in Sources */,
-				C6951B45243E75790018F1DF /* User.swift in Sources */,
+				C6056FBB243CF4B800790848 /* AccountUser.swift in Sources */,
+				C6951B45243E75790018F1DF /* Account.swift in Sources */,
 				C6D0C7B2243CF1E200C1A475 /* OtherAccountsViewController.swift in Sources */,
 				C6D0C79C243CE12400C1A475 /* SceneDelegate.swift in Sources */,
 				C6D0C7AE243CF1B800C1A475 /* SettingsViewController.swift in Sources */,
