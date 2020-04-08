@@ -26,9 +26,9 @@ class SettingsViewController: UIViewController {
         accountBalanceTextField.delegate = self
     }
     private func configureSettings() {
-        AccountUser.shared.username = usernameTextField.text ?? ""
+        BankAccount.shared.username = usernameTextField.text ?? ""
         let newBalance = accountBalanceTextField.text?.convertToDouble() ?? 0.00
-        AccountUser.shared.totalBalance = newBalance
+        BankAccount.shared.totalBalance = newBalance
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {

@@ -25,12 +25,12 @@ class WithdrawDepositViewController: UIViewController {
         amountTextField.text = ""
     }
     private func configureUIProperties() {
-        totalBalanceLabel.text = AccountUser.shared.totalBalance.description
+        totalBalanceLabel.text = BankAccount.shared.totalBalance.description
         amountTextField.delegate = self
     }
     
     private func configureTotalBalance() {
-        balanceObserver = AccountUser.shared.observe(\.totalBalance, options: [.old, .new], changeHandler: { [weak self] (account, change) in
+        balanceObserver = BankAccount.shared.observe(\.totalBalance, options: [.old, .new], changeHandler: { [weak self] (account, change) in
             guard let newTotal = change.newValue else {return}
             self?.totalBalanceLabel.text = newTotal.description
         })
@@ -38,12 +38,12 @@ class WithdrawDepositViewController: UIViewController {
 
     @IBAction func withdrawButtonPressed(_ sender: UIButton) {
         let withdrawAmount = amountTextField.text?.convertToDouble() ?? 0.0
-        AccountUser.shared.totalBalance = (AccountUser.shared.totalBalance) - withdrawAmount
+        BankAccount.shared.totalBalance = (BankAccount.shared.totalBalance) - withdrawAmount
     }
     
     @IBAction func depositButtonPressed(_ sender: UIButton) {
         let depositAmount = amountTextField.text?.convertToDouble() ?? 0.0
-        AccountUser.shared.totalBalance = (AccountUser.shared.totalBalance) + depositAmount
+        BankAccount.shared.totalBalance = (BankAccount.shared.totalBalance) + depositAmount
     }
     deinit {
         balanceObserver?.invalidate()
