@@ -28,10 +28,7 @@ class OtherAccountsViewController: UIViewController {
     }
     
     private func configureUserObservation() {
-        userObservation = Account.shared.observe(\.users, options: [.old, .new], changeHandler: { [weak self] (user, change) in
-            guard let user = change.newValue else {return}
-            self?.users = user
-        })
+        users = Account.shared.users
     }
     
     deinit {
